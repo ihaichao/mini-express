@@ -1,6 +1,7 @@
 # mini-express
 
 A minimal Express which implements server, router and middleware.
+It can be used just like the code below.
 
 ```javascript
 const express = require('../index')
