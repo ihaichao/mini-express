@@ -1,9 +1,6 @@
 const express = require('../index')
+// const express = require('express')
 const app = express()
-
-app.get('/', function(req, res) {
-  res.end('hello express')
-})
 
 app.use((req, res, next) => {
   console.log('this is middleware1')
@@ -13,6 +10,10 @@ app.use((req, res, next) => {
 app.use((req, res, next) => {
   console.log('this is middleware2')
   next()
+})
+
+app.get('/', function(req, res) {
+  res.end('hello express')
 })
 
 app.listen(3000, function (req, res) {
